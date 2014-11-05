@@ -19,13 +19,14 @@ action = gets.chomp
 
 say "You entered #{action}."
 
-if action == '+'
+case action
+when '+'
   puts "#{number1} + #{number2} = #{number1.to_i + number2.to_i}"
-elsif action == '-'
+when'-'
   puts "#{number1} - #{number2} = #{number1.to_i - number2.to_i}"
-elsif action == '*'
+when '*'
   puts "#{number1} * #{number2} = #{number1.to_i * number2.to_i}"
-elsif action == '/'
+when '/'
   puts "#{number1} / #{number2} = #{number1.to_f / number2.to_f}"
 else
   puts "That is not a valid action!"
