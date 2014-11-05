@@ -2,24 +2,31 @@ def say(str)
   puts "=> #{str}"
 end
 
-say "What is the first number?"
-number1 = gets.chomp
-
-say "what is the second number?"
-number2 = gets.chomp
-
-say "Enter 1 to add, 2 to subtract, 3 to multiply, and 4 to divide."
-action = gets.chomp
-
-say "You entered choice #{action}"
-
-if action == '1'
-  puts number1.to_i + number2.to_i
-elsif action == '2'
-  puts number1.to_i - number2.to_i
-elsif action == '3'
-  puts number1.to_i * number2.to_i
-else
-  puts number1.to_f / number2.to_f
+def get_user_input
+  number = gets.chomp
+  return number
 end
 
+
+say "What is the first number?"
+number1 = get_user_input
+
+say "what is the second number?"
+number2 = get_user_input
+
+say "Enter + to add, - to subtract, * to multiply, and / to divide."
+action = gets.chomp
+
+say "You entered #{action}."
+
+if action == '+'
+  puts "#{number1} + #{number2} = #{number1.to_i + number2.to_i}"
+elsif action == '-'
+  puts "#{number1} - #{number2} = #{number1.to_i - number2.to_i}"
+elsif action == '*'
+  puts "#{number1} * #{number2} = #{number1.to_i * number2.to_i}"
+elsif action == '/'
+  puts "#{number1} / #{number2} = #{number1.to_f / number2.to_f}"
+else
+  puts "That is not a valid action!"
+end
