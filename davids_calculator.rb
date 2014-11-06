@@ -2,8 +2,15 @@ def say(str)
   puts "=> #{str}"
 end
 
+def validate_input(number)
+  (number.to_i.to_s == number) || (number.to_f.to_s == number)
+end
+
 def get_user_input
-  number = gets.chomp
+  begin
+    number = gets.chomp
+    puts "That is an invalid number, please enter a different number." unless validate_input(number)
+  end until validate_input(number)
   return number
 end
 
