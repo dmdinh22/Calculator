@@ -21,10 +21,11 @@ number1 = get_user_input
 say "what is the second number?"
 number2 = get_user_input
 
-say "Enter + to add, - to subtract, * to multiply, and / to divide."
+say "Enter + to add, - to subtract, * to multiply, and / to divide. Enter any other key to exit."
 action = gets.chomp
 
 say "You entered #{action}."
+
 
 case action
 when '+'
@@ -38,3 +39,5 @@ when '/'
 else
   puts "That is not a valid action!"
 end
+
+puts "Thank you for using David's calculator."
