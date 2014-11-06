@@ -22,9 +22,8 @@ loop do
   puts "Choose 'r' for rocks, 'p' for paper, or 's' for scissors."
   player_action = gets.chomp.downcase
   end until ACTIONS.keys.include?(player_action)
-  computer_action =ACTIONS.keys.sample
+  computer_action = ACTIONS.keys.sample
   if player_action == computer_action
-    winning_message(player_action)
     puts "It's a tie!"
   elsif player_action == 'r' && computer_action == 's'
     winning_message(player_action)
