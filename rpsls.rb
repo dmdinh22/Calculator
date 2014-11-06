@@ -1,6 +1,6 @@
 # Pseudo Code (LOGIC)
 # 1. all players pick either rock, paper, scissors, lizard, or spock
-# 2. compare: paper > rock*, paper > spock*, rock > scissors*,  rock > lizard*, scissors > paper*, scissors > lizard*, lizard > spock*, lizard > paper*, spock > scissors*, spock > rock, or tie if same
+# 2. compare: paper > rock, paper > spock, rock > scissors,  rock > lizard, scissors > paper, scissors > lizard, lizard > spock, lizard > paper, spock > scissors, spock > rock, or tie if same
 # 3. play again?
 
 PLAY = {'r' => 'rock', 'p' => 'paper', 's' => 'scissors', 'l' => 'lizard', 'sp' => 'spock'}
