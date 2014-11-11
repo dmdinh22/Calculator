@@ -45,7 +45,9 @@ def empty_position(board)
 end
 
 def player_position(board)
-  position = gets.chomp.to_i
+  begin
+    position = gets.chomp.to_i
+  end until empty_position(board).include?(position)
   board[position] = "X"
 end
 
