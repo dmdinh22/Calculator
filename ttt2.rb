@@ -25,7 +25,11 @@ require 'pry'
 # 3 in a row, in a column, or diagonally left or diagonally right wins
 # Tie if all spaces filled but neither player wins
 
-board = { 1 => " ", 2 => " ", 3 => " ", 4 => " ", 5 => " ", 6 => " ", 7 => " ", 8 => " ", 9 => " "}
+def empty_board
+  { 1 => " ", 2 => " ", 3 => " ", 4 => " ", 5 => " ", 6 => " ", 7 => " ", 8 => " ", 9 => " "}
+end
+
+board = empty_board
 # board is the data structure to hold values for player and computer positions.
 
 def draw_board(board)
@@ -98,7 +102,7 @@ draw_board(board)
 
   puts "Would you like to play again? Enter 'y' to continue, or any other key to exit."
   if gets.chomp.downcase == 'y'
-    board = { 1 => " ", 2 => " ", 3 => " ", 4 => " ", 5 => " ", 6 => " ", 7 => " ", 8 => " ", 9 => " "}
+    board = empty_board
   else
     break
   end
