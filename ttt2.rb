@@ -80,9 +80,8 @@ def check_winner(board)
   nil
 end
 
-draw_board(board)
-
 loop do
+draw_board(board)
   begin
     puts "Pick a space (1-9):"
     player_position(board)
@@ -98,7 +97,11 @@ loop do
   end
 
   puts "Would you like to play again? Enter 'y' to continue, or any other key to exit."
-  break if gets.chomp.downcase != 'y'
+  if gets.chomp.downcase == ' y'
+    board = { 1 => " ", 2 => " ", 3 => " ", 4 => " ", 5 => " ", 6 => " ", 7 => " ", 8 => " ", 9 => " "}
+  else
+    break
+  end
 end
 
 puts "Thank you for playing Tic Tac Toe!"
