@@ -74,18 +74,15 @@ end
 def check_winner(board)
   winning_lines = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]]
   winning_lines.each do |line|
-    if board[line[0]] == "X" && board[line[1]] == "X" && board[line[2]] == "X" 
-      return "Player"
-    elsif board[line[0]] == "O" && board[line[1]] == "O" && board[line[2]] == "O" 
-      return "Computer"
-    else
-      return nil
-    end
+    return "Player" if board.values_at(*line).count("X") == 3
+    return "Computer" if board.values_at(*line).count("O") == 3
   end
+  nil
 end
 
+draw_board(board)
+
 loop do
-  draw_board(board)
   begin
     puts "Pick a space (1-9):"
     player_position(board)
