@@ -97,7 +97,7 @@ draw_board(board)
   end
 
   puts "Would you like to play again? Enter 'y' to continue, or any other key to exit."
-  if gets.chomp.downcase == ' y'
+  if gets.chomp.downcase == 'y'
     board = { 1 => " ", 2 => " ", 3 => " ", 4 => " ", 5 => " ", 6 => " ", 7 => " ", 8 => " ", 9 => " "}
   else
     break
